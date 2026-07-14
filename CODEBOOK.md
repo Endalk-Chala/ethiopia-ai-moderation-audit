@@ -82,4 +82,4 @@ Columns of the source `Dataset` sheet. The **Public release** column indicates w
 | Africa-centric | **AfroXLMR** — `Davlan/afro-xlmr-base-hate-v1` | Africa-centric hate classifier. |
 | Language-specific | **Amharic mBERT** — `amengemeda/amharic-hate-speech-detection-mBERT` | Amharic subset only. |
 
-> **Note on the classifier metrics (P/R/F1).** These are computed in the audit run (`code/`), not in the corpus file — the corpus file's Summary sheet lists them as "pending." The manuscript's F1 values (Perspective, AfroXLMR, mBERT, by language) should be verified against the predictions/output file (e.g., `predictions_real*.xlsx` / `Stage1_run_classifiers.ipynb`). See `code/README.md`.
+> **Note on the classifier metrics (P/R/F1).** These are computed in the audit run (`code/`), not in the corpus file — the corpus file's Summary sheet lists them as "pending." The manuscript's F1 values (Perspective, AfroXLMR, mBERT, by language) should be verified against the predictions/output file (e.g., `predictions_real*.xlsx` / `Stage1_run_classifiers.ipynb`). See `CODE.md`.

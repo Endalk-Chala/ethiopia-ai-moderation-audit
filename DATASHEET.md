@@ -45,7 +45,7 @@ Following the *Datasheets for Datasets* framework (Gebru et al., 2021). This doc
 
 - **How is it distributed?** Publicly, in **anonymized, slur-masked** form, via this repository, archived with a persistent DOI on publication.
 - **What is withheld and why?** The **unmasked scoring file** is withheld to limit potential harm (access conditions described here / on request per the manuscript). **Interview transcripts** are **not released** because participant consent and safety preclude it.
-- **License.** Data under **CC BY 4.0** (see [`data/LICENSE`](data/LICENSE)); code under **MIT** (see [`LICENSE`](LICENSE)).
+- **License.** Data under **CC BY 4.0** (see [`LICENSE-CC-BY-4.0-DATA.txt`](LICENSE-CC-BY-4.0-DATA.txt)); code under **MIT** (see [`LICENSE`](LICENSE)).
 
 ## Maintenance
 
