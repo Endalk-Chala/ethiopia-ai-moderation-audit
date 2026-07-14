@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use these materials, please cite the article and this archived repository."
+title: "Replication materials for 'From Detection to Counterspeech: Auditing AI Moderation and Fact-Checking Practices in Ethiopia's Multilingual Online Sphere'"
+type: dataset
+# --- Restore on acceptance (kept minimal for double-blind review) ---
+authors:
+  - family-names: "REDACTED-FOR-REVIEW"
+    given-names: ""
+    # orcid: "https://orcid.org/0000-0001-6210-6706"
+version: "1.0.0"
+date-released: "2026-01-01"   # set to your release date
+license: CC-BY-4.0            # data; code is MIT (see LICENSE)
+# doi: "10.5281/zenodo.XXXXXXX"   # add the Zenodo DOI after archiving
+# url: "https://github.com/<owner>/<repo>"
+preferred-citation:
+  type: article
+  title: "From Detection to Counterspeech: Auditing AI Moderation and Fact-Checking Practices in Ethiopia's Multilingual Online Sphere"
+  journal: "Media and Communication"
+  year: 2026
+  authors:
+    - family-names: "REDACTED-FOR-REVIEW"
+      given-names: ""

@@ -1,0 +1,33 @@
+# --- WITHHELD / NEVER COMMIT ---------------------------------------------
+# Unmasked scoring file (true text used for evaluation) — withheld to limit harm
+*unmasked*
+*_raw*
+scoring_file*
+# Interview data — not released (consent/safety)
+interviews/
+*transcript*
+*.vtt
+# Any file with real usernames/handles/PII
+*identifying*
+*pii*
+
+# --- Secrets / credentials ------------------------------------------------
+.env
+*.key
+*_api_key*
+credentials*.json
+*token*
+
+# --- Notebook / Python cruft ---------------------------------------------
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+.venv/
+venv/
+.DS_Store
+
+# --- Large model artifacts (archive separately if needed) -----------------
+*.bin
+*.safetensors
+*.pt
+checkpoints/
