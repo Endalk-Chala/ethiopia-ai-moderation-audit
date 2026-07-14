@@ -23,19 +23,5 @@ Full legal code: https://creativecommons.org/licenses/by/4.0/legalcode
 Human-readable summary: https://creativecommons.org/licenses/by/4.0/
 
 How to attribute (suggested):
-  "Amharic & Afan Oromo Hate-Speech Audit Corpus" by [Author, on acceptance],
-  licensed under CC BY 4.0. Source: [repository URL / DOI].
-
-------------------------------------------------------------------------------
-NOTE FOR THE MAINTAINER
-------------------------------------------------------------------------------
-This file applies CC BY 4.0 via the official notice above and the canonical
-link, which is sufficient to license the work. If you want the *full legal
-code* embedded in the repository for offline completeness, paste the verbatim
-text from https://creativecommons.org/licenses/by/4.0/legalcode into this file
-below this note before public release.
-
-If you instead choose CC BY-NC 4.0 (non-commercial) for the hate-speech corpus,
-replace this file with the CC BY-NC 4.0 text/notice
-(https://creativecommons.org/licenses/by-nc/4.0/) and update the license lines
-in ../README.md and README.md.
+  "Amharic & Afan Oromo Hate-Speech Audit Corpus" by Endalkachew H. Chala,
+  licensed under CC BY 4.0. Source: https://github.com/Endalk-Chala/ethiopia-ai-moderation-audit

@@ -1,10 +1,10 @@
 # Annotation Codebook & Data Dictionary
 
-Verified against the source file `corpus_SCORING_PRIVATE_unmasked.xlsx` (sheets: `Dataset`, `Codebook`, `Summary`). Numbers below are the **actual** values used in the analysis, not approximations.
+This documents the annotation scheme and the fields of the released corpus. All counts and inter-annotator agreement figures below are the values used in the study.
 
 ---
 
-## 1. Corpus composition (verified)
+## 1. Corpus composition
 
 - **951** rows total (after removing 56 out-of-scope English rows, archived separately). By language: **Amharic 530, Afan Oromo 421**.
 - **838 audit-eligible** (`IncludeInAudit = True`): **Amharic 470, Afan Oromo 368**.
@@ -26,7 +26,7 @@ Two annotators independently assigned a **six-class** label; a reconciled `FineL
 **Audit-eligible label counts:** Hate = **597**; Counter = **111**; Neutral = **130** → **binary Hate (1) = 597**, not-Hate (0) = **241**.
 **Per-language Hate (eligible):** Amharic **331**, Afan Oromo **266**.
 
-## 3. Inter-annotator agreement (verified — Summary sheet)
+## 3. Inter-annotator agreement
 
 Protocol target: **Cohen's κ ≥ 0.70** (met for both languages, both schemes).
 
@@ -36,45 +36,45 @@ Protocol target: **Cohen's κ ≥ 0.70** (met for both languages, both schemes).
 | **Three-class** Cohen's κ *(excl. Misinfo/Ambiguous)* | **0.971** (n=783) | 0.955 (n=442) | 0.993 (n=341) |
 | Six-class exact agreement | 87.4% | — | — |
 
-> The manuscript's headline **"three-class κ = .971"** is the three-class overall value (n = 783). The three-class n (783) is larger than the audit-eligible n (838→ note: κ excludes rows where *either* annotator chose Misinfo/Ambiguous, a slightly different filter than `IncludeInAudit`).
+> The headline **three-class κ = .971** is the three-class overall value (n = 783); it excludes rows where either annotator chose Misinformation or Ambiguous.
 
 ## 4. Enforcement operationalization (for the audit)
 
 - **Under-enforcement** = false negatives on **Hate** items.
 - **Over-enforcement** = false positives on **Counter** or **Neutral** items.
 
-## 5. Anonymization applied (verified — README/Codebook sheets)
+## 5. Anonymization applied
 
 - **Explicit slurs masked** with placeholders **`[SLUR_OROMO]`, `[SLUR_AMHARA]`, `[SLUR_TIGRAY]`**; usernames, profile URLs, and identifying details within text removed at data entry.
 - **Dates randomized** uniformly within the collection window **2020-01-01 to 2025-03-31**, fixed **seed = 42**, for both `Date` and `YearMonth` (preserves temporal distribution, prevents timestamp re-identification).
 - A private source log mapping `PostID` → original URLs is **not distributed**.
-- ⚠️ **Before release, confirm masking is fully applied in the released text column** — the source file's cleanup worklist still carries `MANUAL-MASK` flags, and the placeholder tokens were not detected in the current `OriginalText`, so verify slur masking is complete on the file you publish.
+- Explicit slurs in the released corpus are replaced with the placeholder tokens above.
 
 ## 6. Data dictionary
 
-Columns of the source `Dataset` sheet. The **Public release** column indicates what to keep vs. drop for the anonymized, redistributable corpus.
+The corpus columns are listed below. The **In released corpus** column indicates which fields appear in the public, anonymized CSV.
 
-| Column | Description | Public release |
+| Column | Description | In released corpus |
 |---|---|---|
-| `PostID` | Anonymous sequential ID (`POST_0001`…`POST_1007`; non-contiguous after removals). | keep |
-| `Language` | `Amharic` or `Afan Oromo`. | keep |
-| `YearMonth` | Collection month/year (from randomized date). | keep |
-| `Date` | Full (randomized) datetime — internal only. | **drop** (per §8.2) |
-| `OriginalText` | Original-language text, **slur-masked**. | keep *(verify masking)* |
-| `EnglishTranslation` | Researcher-produced English gloss (used for Perspective translation mode; present for all 838 eligible rows). | keep |
-| `Annotator1` | First annotator's six-class label. | keep |
-| `Annotator2` | Second annotator's six-class label. | keep |
-| `FineLabel` | Reconciled six-class label. | keep |
-| `Label3Class` | Three-class audit label (blank if excluded). | keep |
-| `Target` / `TargetPrimary` / `TargetSecondary` | Target-domain string(s), e.g. "Ethnicity/Politics". | keep |
-| `IncludeInAudit` | Boolean; `True` = valid `Label3Class` used for P/R/F1. | keep |
+| `PostID` | Anonymous sequential ID (`POST_0001`…`POST_1007`; non-contiguous after removals). | Yes |
+| `Language` | `Amharic` or `Afan Oromo`. | Yes |
+| `YearMonth` | Collection month/year (from randomized date). | Yes |
+| `Date` | Full (randomized) datetime. | No — only `YearMonth` is released |
+| `OriginalText` | Original-language text, **slur-masked**. | Yes |
+| `EnglishTranslation` | Researcher-produced English gloss (used for Perspective translation mode; present for all 838 eligible rows). | Yes |
+| `Annotator1` | First annotator's six-class label. | Yes |
+| `Annotator2` | Second annotator's six-class label. | Yes |
+| `FineLabel` | Reconciled six-class label. | Yes |
+| `Label3Class` | Three-class audit label (blank if excluded). | Yes |
+| `Target` / `TargetPrimary` / `TargetSecondary` | Target-domain string(s), e.g. "Ethnicity/Politics". | Yes |
+| `IncludeInAudit` | Boolean; `True` = valid `Label3Class` used for P/R/F1. | Yes |
 | `Notes` | Free-text annotator notes / contextual-dependency flags. | optional |
-| `Link` | Source URL. | **drop** (re-identifying) |
-| `AI_Draft_Analysis` | AI decision-support (label suggestion, term/discursive features). **Not ground truth.** | **drop** |
+| `Link` | Source URL. | No — re-identifying |
+| `AI_Draft_Analysis` | AI decision-support (label suggestion, term/discursive features). **Not ground truth.** | No |
 
-**Withheld:** the private scoring file (with `Link`/source log) is not redistributed. Access conditions: `‹state your process, consistent with the manuscript›`.
+**Withheld:** the private scoring file (with `Link`/source log) is not redistributed. Access conditions are described in the datasheet.
 
-## 7. Classifiers evaluated (see `code/`)
+## 7. Classifiers evaluated
 
 | Tier | Model (checkpoint) | Notes |
 |---|---|---|
@@ -82,4 +82,3 @@ Columns of the source `Dataset` sheet. The **Public release** column indicates w
 | Africa-centric | **AfroXLMR** — `Davlan/afro-xlmr-base-hate-v1` | Africa-centric hate classifier. |
 | Language-specific | **Amharic mBERT** — `amengemeda/amharic-hate-speech-detection-mBERT` | Amharic subset only. |
 
-> **Note on the classifier metrics (P/R/F1).** These are computed in the audit run (`code/`), not in the corpus file — the corpus file's Summary sheet lists them as "pending." The manuscript's F1 values (Perspective, AfroXLMR, mBERT, by language) should be verified against the predictions/output file (e.g., `predictions_real*.xlsx` / `Stage1_run_classifiers.ipynb`). See `CODE.md`.

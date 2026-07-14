@@ -1,10 +1,9 @@
 # Data
 
-This folder holds the **anonymized, slur-masked** annotated corpus.
+This folder holds the **anonymized, slur-masked** annotated corpus, `corpus/corpus_annotated_masked.csv` (schema: see [`CODEBOOK.md`](CODEBOOK.md)).
 
-- Place the corpus file at `corpus/corpus_annotated_masked.csv` (schema: see [`CODEBOOK.md`](CODEBOOK.md)).
-- **Do not** add the unmasked scoring file, any file with real usernames/handles, or interview transcripts (these are excluded by `.gitignore` patterns and by policy).
+The unmasked scoring file and interview transcripts are not included (see [`DATASHEET.md`](DATASHEET.md) and [`ETHICS.md`](ETHICS.md)).
 
-**License:** CC BY 4.0 (see [`LICENSE-CC-BY-4.0-DATA.txt`](LICENSE-CC-BY-4.0-DATA.txt)). If you prefer to restrict commercial reuse of this hate-speech corpus, replace it with **CC BY-NC 4.0** and update the note in the top-level README.
+**License:** CC BY 4.0 (see [`LICENSE-CC-BY-4.0-DATA.txt`](LICENSE-CC-BY-4.0-DATA.txt)).
 
 **Provenance & construction:** see [`DATASHEET.md`](DATASHEET.md).
