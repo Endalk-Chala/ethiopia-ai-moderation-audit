@@ -1,6 +1,6 @@
 # Data
 
-This folder holds the **anonymized, slur-masked** annotated corpus, `corpus/corpus_annotated_masked.csv` (schema: see [`CODEBOOK.md`](CODEBOOK.md)).
+The **anonymized, slur-masked** annotated corpus is [`corpus_annotated_masked.csv`](corpus_annotated_masked.csv) (951 rows; 838 audit-eligible). Field schema: see [`CODEBOOK.md`](CODEBOOK.md).
 
 The unmasked scoring file and interview transcripts are not included (see [`DATASHEET.md`](DATASHEET.md) and [`ETHICS.md`](ETHICS.md)).
 

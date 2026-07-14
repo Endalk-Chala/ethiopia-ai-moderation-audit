@@ -10,7 +10,7 @@ This repository accompanies a mixed-methods audit of AI hate-speech moderation f
 
 | Artifact | Status | Location |
 |---|---|---|
-| Annotated corpus — anonymized, slur-masked | included | `data/corpus/` |
+| Annotated corpus — anonymized, slur-masked | included | `corpus_annotated_masked.csv` |
 | Annotation codebook (scheme, collapse rules, agreement) | included | [`CODEBOOK.md`](CODEBOOK.md) |
 | Datasheet (Gebru et al. 2021 structure) | included | [`DATASHEET.md`](DATASHEET.md) |
 | Classifier-audit code | included | [`CODE.md`](CODE.md) |
@@ -47,7 +47,7 @@ Three classifiers are evaluated against the binarized gold standard, disaggregat
 
 ## Licensing
 
-- **Data** (`data/`): **CC BY 4.0** — see [`LICENSE-CC-BY-4.0-DATA.txt`](LICENSE-CC-BY-4.0-DATA.txt).
+- **Data:** **CC BY 4.0** — see [`LICENSE-CC-BY-4.0-DATA.txt`](LICENSE-CC-BY-4.0-DATA.txt).
 - **Code**: **MIT** — see [`LICENSE`](LICENSE).
 
 ## How to cite
