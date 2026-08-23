@@ -1,0 +1,9 @@
+classifier,scope,coverage,accuracy,precision,recall,f1,TP,FP,FN,TN
+Perspective,Overall,687/838 (82%),0.345,1.0,0.104,0.188,52,0,450,185
+Perspective,Amharic,409/470 (87%),0.347,1.0,0.113,0.203,34,0,267,108
+Perspective,Afan Oromo,278/368 (76%),0.342,1.0,0.09,0.164,18,0,183,77
+AfriHate,Overall,838/838 (100%),0.567,0.918,0.43,0.586,257,23,340,218
+AfriHate,Amharic,470/470 (100%),0.704,0.914,0.64,0.753,212,20,119,119
+AfriHate,Afan Oromo,368/368 (100%),0.391,0.938,0.169,0.287,45,3,221,99
+Amharic mBERT,Overall,470/838 (56%),0.626,0.864,0.556,0.676,184,29,147,110
+Amharic mBERT,Amharic,470/470 (100%),0.626,0.864,0.556,0.676,184,29,147,110
