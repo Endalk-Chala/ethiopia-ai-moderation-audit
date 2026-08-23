@@ -1,0 +1,29 @@
+# Environment for the computational audit.
+#   python -m venv .venv && source .venv/bin/activate
+#   pip install -r requirements.txt
+#
+# Verified on Python 3.11. Python >= 3.10 is required.
+
+# --- needed for `python reproduce.py` (verification + Table 1) ----------------
+pandas==3.0.2
+numpy==2.4.4
+scikit-learn==1.8.0
+openpyxl==3.1.5
+
+# --- additionally needed for `python reproduce.py --score` -------------------
+# Re-running the classifiers. Install these only if you intend to re-score.
+torch==2.6.0
+transformers==4.49.0
+google-api-python-client==2.161.0
+tqdm==4.67.1
+
+# Notes on reproducibility of --score:
+#   * Perspective API is a hosted, versioned service. Google does not expose a
+#     pin, so re-scored TOXICITY values may drift from the deposited ones. The
+#     deposited scores were collected in June 2026.
+#   * The AfroXLMR fine-tune used seed=42, 3 epochs, max_length=128,
+#     batch_size=16, lr=2e-5, macro-F1 as the selection metric
+#     (validation macro-F1 = 0.714). GPU nondeterminism means a re-run can
+#     differ marginally.
+#   * The two Hugging Face checkpoints are unversioned repository references;
+#     pass revision=<commit-sha> to pin them if exact reproduction matters.
