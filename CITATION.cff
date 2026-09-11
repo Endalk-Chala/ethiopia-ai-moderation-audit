@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "If you use these materials, please cite the article and this archived repository."
+message: "If you use these materials, please cite the published article and this repository."
 title: "Replication materials for 'From Detection to Counterspeech: Auditing AI Moderation and Fact-Checking Practices in Ethiopia's Multilingual Online Sphere'"
 type: dataset
 authors:
@@ -7,7 +7,6 @@ authors:
     given-names: "Endalkachew H."
     orcid: "https://orcid.org/0000-0001-6210-6706"
 version: "1.0.0"
-date-released: "2026-01-01"
 license: CC-BY-4.0
 url: "https://github.com/Endalk-Chala/ethiopia-ai-moderation-audit"
 preferred-citation:
@@ -15,6 +14,9 @@ preferred-citation:
   title: "From Detection to Counterspeech: Auditing AI Moderation and Fact-Checking Practices in Ethiopia's Multilingual Online Sphere"
   journal: "Media and Communication"
   year: 2026
+  doi: "10.17645/mac.12653"
+  url: "https://doi.org/10.17645/mac.12653"
   authors:
     - family-names: "Chala"
       given-names: "Endalkachew H."
+      orcid: "https://orcid.org/0000-0001-6210-6706"
