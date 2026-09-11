@@ -2,9 +2,11 @@
 
 Replication data and code for **Chala, E. H. (2026). From Detection to Counterspeech: Auditing AI Moderation and Fact-Checking Practices in Ethiopia's Multilingual Online Sphere.** *Media and Communication*, 14, Article 12653. [doi:10.17645/mac.12653](https://doi.org/10.17645/mac.12653)
 
+**Project links:** [Published article](https://doi.org/10.17645/mac.12653) · [Scholarly website](https://endalk-chala.github.io/publication/2026-09-08-from-detection-to-counterspeech/) · [ORCID](https://orcid.org/0000-0001-6210-6706)
+
 The study audits three publicly deployable hate-speech classifiers against 838 hand-annotated Amharic and Afan Oromo social-media posts (2020–2025). This repository holds the anonymized corpus, the classifier predictions, the annotation codebook and datasheet, the audit notebooks, and a script that regenerates the article's Table 1 in one command.
 
-**Version 1.0.0**
+**Repository version 1.0.0**
 
 ---
 
@@ -74,7 +76,7 @@ Two things worth knowing up front, both documented in full elsewhere:
 | [`ETHICS.md`](ETHICS.md) | IRB, consent, masking policy, withheld material |
 | [`VERIFICATION.md`](VERIFICATION.md) | Every published number, recomputed |
 | [`CHANGELOG.md`](CHANGELOG.md) | Release notes and known limitations |
-| [`CITATION.cff`](CITATION.cff) | How to cite |
+| [`CITATION.cff`](CITATION.cff) | Machine-readable citation metadata |
 
 ## What is not here
 
@@ -86,7 +88,7 @@ Data under **CC BY 4.0** ([`LICENSE-CC-BY-4.0-DATA.txt`](LICENSE-CC-BY-4.0-DATA.
 
 ## Citation
 
-Please cite both the article and this repository — see [`CITATION.cff`](CITATION.cff).
+Please cite the published article when referring to the study. If you reuse the deposited data or code, also cite this repository (version 1.0.0). Machine-readable citation metadata, including the article DOI and my ORCID, are provided in [`CITATION.cff`](CITATION.cff).
 
 ---
 
